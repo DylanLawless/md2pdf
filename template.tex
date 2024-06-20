@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[export]{adjustbox}
+\usepackage{grffile} % be more flexible with filesname (e.g. .am.png)
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+}
+
+\geometry{a4paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+
+\lstset{
+  basicstyle=\ttfamily,
+}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+\title{}
+\date{\today}
+
+
+% The data variable used here is passed from the progresss.sh script.
+% To instead use the true data via tex command use: \@date
+
+\makeatletter
+\def\@maketitle{
+\large \textbf{\@title} \par
+\small $date$ \par
+
+\bigskip
+}
+\makeatother
+
+\begin{document}
+\maketitle
+$body$
+
+\end{document}
+
+
